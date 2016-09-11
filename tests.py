@@ -18,3 +18,7 @@ def test_add_prono():
     assert len(pronos) == 6
     new_expected_result = {1: 6, 2: 0, 3: 2}
     assert compute_scores(results) == new_expected_result
+
+
+def test_fetch_user_pronos():
+    assert len(fetch_user_pronos(1)) == 2

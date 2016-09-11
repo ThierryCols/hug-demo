@@ -11,7 +11,7 @@ users = [
     }, {
         'id': 3,
         'name': 'Marc',
-}]
+    }]
 
 pronos = [{
     'id': 1,

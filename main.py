@@ -39,6 +39,11 @@ def add_prono(new_prono):
     pronos.append(new_prono)
 
 
+def fetch_user_pronos(user_id):
+    """ Retrieve all pronos from a user """
+    return [prono for prono in pronos if prono['userId'] == user_id]
+
+
 if __name__ == '__main__':
     print(compute_scores(results))
     print('*******')
@@ -50,3 +55,5 @@ if __name__ == '__main__':
     add_prono({'id': 6, 'gameId': 3, 'userId': 3, 'teamId1': 2,
                         'teamId2': 0, 'winner': 1})
     print(compute_scores(results))
+    print('**~~**')
+    print(fetch_user_pronos(1))
