@@ -53,17 +53,17 @@ games = [{
     'id': 1,
     'teamId1': 1,
     'teamId2': 2,
-    'gameDate': datetime(2016, 6, 15),
+    'gameDate': datetime(2017, 4, 10),
 }, {
     'id': 2,
     'teamId1': 2,
     'teamId2': 1,
-    'gameDate': datetime(2016, 6, 20),
+    'gameDate': datetime(2017, 4, 15),
 }, {
     'id': 3,
     'teamId1': 2,
     'teamId2': 3,
-    'gameDate': datetime(2016, 6, 25),
+    'gameDate': datetime(2017, 4, 20),
 }]
 results = {
     1: {

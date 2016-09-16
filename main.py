@@ -4,7 +4,7 @@ from functools import reduce
 from demo_data import *
 
 
-def compute_scores(results):
+def compute_scores():
     """ return dict with userId and its score """
     return {
         id: reduce(
@@ -27,9 +27,9 @@ def compute_user_score(total, game_prono):
 
 
 def fetch_next_games():
-    """ Fetch games for the next five days """
-    today = datetime(2016, 6, 8)
-    in_five_days = today + timedelta(days=15)
+    """ Fetch games for the next ten days """
+    today = datetime(2017, 4, 6)
+    in_five_days = today + timedelta(days=10)
     return [game for game in games
             if (game['gameDate'] > today and game['gameDate'] <= in_five_days)]
 
@@ -45,7 +45,7 @@ def fetch_user_pronos(user_id):
 
 
 if __name__ == '__main__':
-    print(compute_scores(results))
+    print(compute_scores())
     print('*******')
     print('*******')
     print(fetch_next_games())
@@ -54,6 +54,6 @@ if __name__ == '__main__':
     print('Adding a prono for Player 3')
     add_prono({'id': 6, 'gameId': 3, 'userId': 3, 'teamId1': 2,
                         'teamId2': 0, 'winner': 1})
-    print(compute_scores(results))
+    print(compute_scores())
     print('**~~**')
     print(fetch_user_pronos(1))

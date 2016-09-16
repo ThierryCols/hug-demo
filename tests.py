@@ -4,7 +4,7 @@ from main import *
 
 def test_compute_scores():
     expected_result = {1: 6, 2: 0, 3: 1}
-    assert compute_scores(results) == expected_result
+    assert compute_scores() == expected_result
 
 
 def test_fetch_next_games():
@@ -17,7 +17,7 @@ def test_add_prono():
                         'teamId2': 0, 'winner': 1})
     assert len(pronos) == 6
     new_expected_result = {1: 6, 2: 0, 3: 2}
-    assert compute_scores(results) == new_expected_result
+    assert compute_scores() == new_expected_result
 
 
 def test_fetch_user_pronos():
